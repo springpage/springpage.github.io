@@ -57,18 +57,18 @@
 
                 In this app, the user will login by Google. After logging in, the user can find list of drivers near him. If the App not found any drivers near him, it will generate random drivers near that user, save to the database, and then find again with query like this.
                 <br /><br />
-                <pre><code>
-                Driver.find({
-                    'geometry.coordinates': {
-                      $nearSphere: {
-                        $geometry: {
-                          type: 'Point',
-                          coordinates: [lon, lat]
-                        },
-                        $maxDistance: 8000
-                      }
-                    }
-                  })
+                <pre><code >
+Driver.find({
+    'geometry.coordinates': {
+      $nearSphere: {
+        $geometry: {
+          type: 'Point',
+          coordinates: [lon, lat]
+        },
+        $maxDistance: 8000
+      }
+    }
+  })
                 </code></pre>
 
                 <br /> Then, the user can ride with that driver, after riding, the trip will be saved into the database, and user can also write review about that trip too, and he can see the list of his trip in the Drive History page.<br />
@@ -116,7 +116,7 @@
                 <div style="text-align: center;">
                     <iframe class="image main" allow="autoplay; encrypted-media" allowfullscreen="" frameborder="0" height="315" src="https://www.youtube.com/embed/DzMZCwooPaY?rel=0" width="560"></iframe></div>
                 <br />
-<br />
+                <br />
                 <h1>
                     Some react native apps</h1>
                 <h2 style="text-align: center;">
