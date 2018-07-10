@@ -5,7 +5,8 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-	<head>
+
+<head>
     <title>Spring Page's website</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -50,15 +51,157 @@
 
             <!-- Featured Post -->
             <article class="post">
-                <h2 style="text-align: center;">
-                    A simple Go program</h2>
-                <br /> Code:&nbsp;<a href="https://github.com/springpage/Go-coinchecker" target="_blank">https://github.com/springpage/Go-coinchecker</a><br />
+                <h1 style="text-align: center;">
+                    Uber Web, a simple Full Stack App</h1>
+                <div class="image main"><img src="images/uberweb.png" alt="" /></div>
+
+                In this app, the user will login by Google. After logging in, the user can find list of drivers near him. If the App not found any drivers near him, it will generate random drivers near that user, save to the database, and then find again with query like this.
+                <br /><br />
+                <pre><code>
+                Driver.find({
+                    'geometry.coordinates': {
+                      $nearSphere: {
+                        $geometry: {
+                          type: 'Point',
+                          coordinates: [lon, lat]
+                        },
+                        $maxDistance: 8000
+                      }
+                    }
+                  })
+                </code></pre>
+
+                <br /> Then, the user can ride with that driver, after riding, the trip will be saved into the database, and user can also write review about that trip too, and he can see the list of his trip in the Drive History page.<br />
+                <br />
+                <b>Version 1: Use React + Redux for front end</b><br /> <b>Link:</b>&nbsp;
+                <a href="https://secret-coast-61207.herokuapp.com/" target="_blank">https://secret-coast-61207.herokuapp.com/</a><br /> <b>Github:</b>&nbsp;
+                <a href="https://github.com/springpage/Fullstack-uberweb-redux" target="_blank">https://github.com/springpage/Fullstack-uberweb-redux</a><br />
+
+                <br />
+                <b>Version 2: Use React + GraphQL + Apollo for front end and Apollo Express for Back end.</b><br /> <b>Link:</b>&nbsp;
+                <a href="https://tranquil-brook-76662.herokuapp.com/" target="_blank">https://tranquil-brook-76662.herokuapp.com/</a><br /> <b>Github:</b>&nbsp;
+                <a href="https://github.com/springpage/Fullstack-uberweb-graphql" target="_blank">https://github.com/springpage/Fullstack-uberweb-graphql</a><br /> <b>GraphiQL tool is available too:</b>&nbsp;<a href="https://tranquil-brook-76662.herokuapp.com/graphiql?query=%23%20This%20query%20only%20works%20after%20you%20%0A%23%20logging%20in%20with%20Google%20in%20the%20App%0A%0A%7B%0A%20%20user%7B%0A%20%20%20%20id%0A%20%20%20%20googleId%0A%20%20%7D%0A%7D" target="_blank">https://tranquil-brook-76662.herokuapp.com/graphiql</a><br />
+                <br />
+
+                <div>
+                    In both 2 version, at backend I used Nodejs + ExpressJS + MongoDB</div>
+                <br />
+
+                <div style="text-align: center;">
+                    <iframe allow="autoplay; encrypted-media" allowfullscreen="" frameborder="0" height="315" src="https://www.youtube.com/embed/QbgpxGxBoR8?rel=0" width="560"></iframe></div>
+
+                <br /> <br /> <br />
+                <h1 style="text-align: center;">
+                    A simple Go program</h1>
+                <br /> <b>Code:</b>&nbsp;<a href="https://github.com/springpage/Go-coinchecker" target="_blank">https://github.com/springpage/Go-coinchecker</a><br />
 
                 <br />This program retrieve Bitcoin price from an API, and get the last 60 minute's price, every minute.<br /> Then it draw a chart that user can view chart at localhost:8080.<br />
                 <div class="image main"><img src="images/go-chart.png" alt="" /></div>
                 Also, the program analyze the data and check if the prices has big changes in the last 10 minutes. Then it output the analyze result to the console.<br /> Every 5 minutes, the program gets data from API again, analyze and write result to the screen.<br />
                 <div class="image main"><img src="images/go-console.png" alt="" /></div>
                 <br />
+
+
+                <h1 style="text-align: center;">
+                    A simple react app</h1>
+                <div>
+                    <br /></div>
+                <div>
+                    <b>Demo:</b>&nbsp;<a href="http://annoyed-kite.surge.sh/" target="_blank">http://annoyed-kite.surge.sh/</a></div>
+                <div>
+                    <b>Github:</b>&nbsp;<a href="https://github.com/springpage/unsplash-pictures" target="_blank">https://github.com/springpage/unsplash-pictures</a></div>
+                <div>
+                    <br /> This app work with Unsplash Api and load beautiful pictures.<br /><br /></div>
+
+                <div style="text-align: center;">
+                    <iframe allow="autoplay; encrypted-media" allowfullscreen="" frameborder="0" height="315" src="https://www.youtube.com/embed/DzMZCwooPaY?rel=0" width="560"></iframe></div>
+                <br />
+<br />
+                <h1>
+                    Some react native apps</h1>
+                <h2 style="text-align: center;">
+                    Gmail UI Clone in React Native</h2>
+                <div>
+                    Clone using Native Base Library</div>
+                <div>
+                    <br /></div>
+                <div style="text-align: center;">
+                    <img src="https://1.bp.blogspot.com/-buO59yfAvXc/WyQwRU0Up1I/AAAAAAAAAAs/ADCbwlnt5wsr9rcDPPENDqL-ZyDTgFz8wCLcBGAs/s320/Screenshot_2018-06-15-14-27-46.png" /></div>
+                <div>
+                    <br /></div>
+                <div>
+                    <b>Link</b>:&nbsp;<a href="https://expo.io/@spring6166/gmail-clone" target="_blank">https://expo.io/@spring6166/gmail-clone</a></div>
+                <div>
+                    <b>Code</b>:&nbsp;<a href="https://github.com/springpage/gmail-clone" target="_blank">https://github.com/springpage/gmail-clone</a></div>
+                <div>
+                    <br /></div>
+                <h2 style="text-align: center;">
+                    Youtube Favourites</h2>
+                <div>
+                    <br /></div>
+                <div>
+                    <div>
+                        - This is a simple app that fetch videos from youtube using youtube api, after user search. Then it list the videos and user can click and play it.</div>
+                    <div>
+                        - User can also click like video, then the liked video will be save into the device storage. All the liked videos will be listed and displayed at the Liked Video Screen.</div>
+                    <div>
+                        - If User not like video anymore, he can click unlike and the video will be remove from both screen and device storage.</div>
+                </div>
+                <div>
+                    <br /></div>
+                <div>
+                    This app use Asyncstorage, react, redux, redux-thunk + react navigation</div>
+                <div>
+                    <br /></div>
+                <div>
+                    <b>Link:</b>&nbsp;<a href="https://expo.io/@spring6166/favourite-youtube-and-weather" target="_blank">https://expo.io/@spring6166/favourite-youtube-and-weather</a></div>
+                <div>
+                    <b>Code:</b>&nbsp;<a href="https://github.com/springpage/youtube-favourites" target="_blank">https://github.com/springpage/youtube-favourites</a></div><br />
+                <div style="text-align: center;">
+                    <iframe allow="autoplay; encrypted-media" allowfullscreen="" frameborder="0" height="315" src="https://www.youtube.com/embed/8vzB3ZuwRnc?rel=0" width="560"></iframe></div>
+                <div>
+                    <br /></div><br />
+                <h2 style="text-align: center;">
+                    Note and Auth</h2><br />
+                <div>
+                    <div>
+                        - This app implement types of Authentication like Login via facebook, via phone, via email and password.</div>
+                    <div>
+                        &nbsp;- After login, user can make some note and save that note to firebase database.</div>
+                    <div>
+                        - Next time user login, user will get the note and can change it and save it again.</div>
+                </div>
+                <div>
+                    <br /></div>
+                <div>
+                    <div>
+                        - For facebook login, I implement facebook authentication feature from expo.</div>
+                    <div>
+                        - Phone verification: I make 3 small functions and uploaded to google cloud functions. The functions connect with firebase and twilio API.</div>
+                    <div>
+                        - The functions then help user to make account in firebase, generate 4-digit random code, tell twilio to send code to user's phone. And compare the code it generate with the code user submit. If the code is true, user will be generated a token to access to firebase and make note.</div>
+                    <div>
+                        - This app use Axios, react navigation, native base.</div>
+                </div>
+                <div>
+                    <br /></div>
+                <div>
+                    Note: Some API maybe outdated so you may need to change the API to make it works.</div>
+                <div>
+                    <br /></div>
+                <div>
+                    <b>Link:</b>&nbsp;<a href="https://expo.io/@spring6166/my-secret" target="_blank">https://expo.io/@spring6166/my-secret</a></div>
+                <div>
+                    <b>Github:</b>&nbsp;<a href="https://github.com/springpage/note-and-auth" target="_blank">https://github.com/springpage/note-and-auth</a></div> <br />
+
+                <div style="text-align: center;">
+                    <iframe allow="autoplay; encrypted-media" allowfullscreen="" frameborder="0" height="315" src="https://www.youtube.com/embed/bEqOizpeC3g?rel=0" width="560"></iframe></div>
+
+
+                <div>
+                    <br /></div>
+                <div>
+                    <br /></div>
 
 
 
@@ -99,4 +242,5 @@
     <script src="assets/js/main.js"></script>
 
 </body>
+
 </html>
